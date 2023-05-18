@@ -17,7 +17,7 @@ const ErrorPage = () => {
          speed={1}
         />
         
-        <div className='max-w-md text-center'>
+        <div className='max-w-md text-center pb-5'>
          
           <p className='text-2xl font-semibold md:text-3xl mb-8'>
             {error?.message}
