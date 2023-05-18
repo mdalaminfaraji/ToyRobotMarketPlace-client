@@ -9,7 +9,7 @@ const Banner = () => {
             <div className=' text-4xl justify-self-center self-center text-[#F1F6F9] '>
           <span className='text-7xl'> Welcome to</span><br/> <span className='text-5xl py-3'>Our Robot website,</span><br/> You'll Discover the <br/> World of Toy
           Robots<br/>
-            <button className=' btn-primary'> Register</button>
+            <button className=' btn-primary'> Read More</button>
             </div> 
             <div className='relative'>
 

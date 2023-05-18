@@ -2,9 +2,21 @@ import React, { useContext, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { ShoppingCartIcon } from '@heroicons/react/24/solid'
 import logo from '../../images/logo.webp'
+import { AuthContext } from '../../Providers/AuthProviders'
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const {user,logOUt}=useContext(AuthContext);
+    console.log(user?.photoURL,user?.displayName        );
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleLogOut=()=>{
+    logOUt()
+    .then(result=>{
+        console.log(result);
+    })
+    .catch(error=>{
+        console.log(error);
+    })
+  }
   return (
     <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24  bg-[#212A3E] text-[#F1F6F9]'>
       <div className='relative flex items-center justify-between'>
@@ -22,7 +34,9 @@ const Header = () => {
           </span>
         </Link>
         <ul className='items-center hidden space-x-8 lg:flex'>
-          <li>
+
+            <ul className='flex items-center space-x-8'>
+            <li>
             <NavLink
               to='/'
               aria-label='Home'
@@ -53,7 +67,12 @@ const Header = () => {
             </NavLink>
           </li>
           
-          <li>
+                
+            </ul>
+
+    {
+        user?.displayName ?<>
+                      <li>
             <NavLink
               to='/myToys'
               aria-label='MyToys'
@@ -78,13 +97,18 @@ const Header = () => {
           <NavLink
               to='/addAToy'
               aria-label='About Us'
-              title='About Us'
+              title={user?.displayName}
               className={({ isActive }) => (isActive ? 'active' : 'default')}
             >
-             User Profile picture
+            <img src={user?.photoURL} className='w-14 h-14 rounded-full'/>
             </NavLink>
-          </li>
+          </li> 
           <li>
+            <button onClick={handleLogOut} className='cursor-pointer hover:bg-white hover:text-black hover:rounded-xl hover:p-1 hover:font-semibold'>LogOut</button>
+          </li>
+       
+        </>:<>
+        <li>
           <NavLink
               to='/login'
               aria-label='login'
@@ -94,7 +118,18 @@ const Header = () => {
            Login
             </NavLink>
           </li>
+        
+        </>
+    }   
+      
+
+       
+      
         </ul>
+  
+  
+ 
+       
         <div className='lg:hidden'>
           <button
             aria-label='Open Menu'

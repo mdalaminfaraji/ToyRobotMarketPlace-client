@@ -7,7 +7,7 @@ import { FaGoogle } from 'react-icons/fa';
 
 
 const Login = () => {
-    const {signIn,user, googleSignIn}=useContext(AuthContext);
+    const {signIn,user, signInWithGoogle}=useContext(AuthContext);
     const navigate=useNavigate();
     const location=useLocation();
     const from=location.state?.from?.pathname || "/";
@@ -36,7 +36,7 @@ const Login = () => {
     }
 
     const handleGoogleSignIn=()=>{
-            googleSignIn()
+        signInWithGoogle()
             .then(result=>{
                 console.log(result.user);
                 navigate(from, { replace: true });
