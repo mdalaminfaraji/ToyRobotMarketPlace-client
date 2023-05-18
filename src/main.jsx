@@ -11,6 +11,10 @@ import Home from './Home/Home/Home.jsx';
 import Login from './Login/Login.jsx';
 import Register from './Register/Register.jsx';
 import ErrorPage from './ErrorPage/ErrorPage.jsx';
+import AllToys from './AllToys/AllToys/AllToys.jsx';
+import AddAToy from './AllToys/AddAToy/AddAToy.jsx';
+import MyToys from './AllToys/MyToys/MyToys.jsx';
+import Blogs from './Blogs/Blogs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +33,23 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element:<Register></Register>
+      },
+      {
+        path:'/all-toys',
+        element:<AllToys></AllToys>
+        
+      },
+      {
+        path:'/addAToy',
+        element:<AddAToy></AddAToy>
+      },
+      {
+        path:'/myToys',
+        element:<MyToys></MyToys>
+      },
+      {
+        path:'/blogs',
+        element:<Blogs></Blogs>
       }
     ]
   },
