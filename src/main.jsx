@@ -17,6 +17,7 @@ import MyToys from './AllToys/MyToys/MyToys.jsx';
 import Blogs from './Blogs/Blogs.jsx';
 import AuthProviders from './Providers/AuthProviders.jsx';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
+import ViewDetails from './Shared/ViewDetails/ViewDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
       {
         path:'/blogs',
         element:<Blogs></Blogs>
+      },
+      {
+        path:'/viewDetails/:_id',
+        element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/toyRobots/${params._id}`)
       }
     ]
   },

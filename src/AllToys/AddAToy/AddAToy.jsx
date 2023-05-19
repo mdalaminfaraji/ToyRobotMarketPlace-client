@@ -48,11 +48,11 @@ const AddAToy = () => {
     return (
         <>
         <div className='mt-2'>
-            <Link to='/'  style={{fontFamily:'Rancho'}} className='btn  btn-warning'><FaArrowLeft/>Back to home</Link>
+            <Link to='/'   style={{fontFamily:'Rancho'}} className='btn  btn-warning'><FaArrowLeft/>Back to home</Link>
         </div>
         
         <form onSubmit={handleSubmit} className='bg-[#F4F3F0] rounded-md pb-40'>
-          <h1 className='text-center' style={{fontFamily:'Rancho', fontSize:'45px'}} >Add New Toy</h1> 
+          <h1 className='text-center font-bold text-5xl p-5'  >Add New Toy</h1> 
           <p className='text-center mx-4  md:w-1/2 md:mx-auto' style={{fontFamily:'Raleway', fontSize:'18px'}}>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout.</p> 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:mx-40 mx-10">
         <div className="form-control">
