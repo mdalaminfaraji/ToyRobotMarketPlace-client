@@ -18,7 +18,7 @@ const Header = () => {
     })
   }
   return (
-    <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24  bg-[#212A3E] text-[#F1F6F9]'>
+    <div className='sticky z-50 top-0  px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24  bg-[#212A3E] text-[#F1F6F9]'>
       <div className='relative flex items-center justify-between'>
         <Link
           to='/'
@@ -29,7 +29,7 @@ const Header = () => {
           <div className='flex items-center justify-center w-12 h-12 rounded-full bg-cyan-200'>
             <img src={logo} alt="robot logo" className='rounded-full' />
           </div>
-          <span className='ml-2 text-xl font-bold tracking-wide '>
+          <span className='ml-2 text-2xl font-bold tracking-wide '>
             RoboToysWorld
           </span>
         </Link>

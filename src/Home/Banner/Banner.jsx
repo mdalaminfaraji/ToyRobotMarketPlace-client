@@ -4,10 +4,10 @@ import banner2 from '../../images/banner2.jpg';
 
 const Banner = () => {
     return (
-        <div className=" mt-1" >
+        <div className=" mt-1 " style={{fontFamily:'Relway'}}>
             <div className='grid grid-cols-1 md:grid-cols-2 ' style={{ backgroundImage: `url(${banner2})`, backgroundSize:'cover', height:'650px' }}>
             <div className=' text-4xl justify-self-center self-center text-[#F1F6F9] '>
-          <span className='text-7xl'> Welcome to</span><br/> <span className='text-5xl py-3'>Our Robot website,</span><br/> You'll Discover the <br/> World of Toy
+          <span className='text-8xl'> Welcome to</span><br/> <span className='text-5xl py-3'>Our Robot website,</span><br/> You'll Discover the <br/> World of Toy
           Robots<br/>
             <button className=' btn-primary'> Read More</button>
             </div> 

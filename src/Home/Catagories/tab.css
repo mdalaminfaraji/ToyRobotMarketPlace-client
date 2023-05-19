@@ -1,21 +1,26 @@
 .app-container {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
+   
   }
   
   .react-tabs__tab-list {
     display: flex;
     list-style: none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
+   
   }
   
   .react-tabs__tab {
-    padding: 10px 20px;
-    background-color: lightgray;
+    padding: 20px;
+    background-color: #212A3E;
     margin-right: 10px;
     cursor: pointer;
+    color:white;
+    border: 3px solid #212A3E;
+    border-radius: 10px;
   }
   
   .react-tabs__tab--selected {
@@ -24,5 +29,8 @@
   
   .react-tabs__tab-panel {
     padding: 20px;
+    border: 3px solid ;
+    width: 75%;
+    margin: 0 auto;
   }
   

@@ -6,7 +6,11 @@ import 'react-tabs/style/react-tabs.css';
 
 const Catagoriy = () => {
     return (
-      <div className="app-container">
+
+     <>
+     <h1 className='text-center text-5xl font-bold mt-5 '>Toy Robot Category</h1>
+     
+     <div className="app-container">
         <Tabs>
           <TabList>
             <Tab>Category 1</Tab>
@@ -42,6 +46,7 @@ const Catagoriy = () => {
           </TabPanel>
         </Tabs>
       </div>
+     </>
     );
   };
 export default Catagoriy;
