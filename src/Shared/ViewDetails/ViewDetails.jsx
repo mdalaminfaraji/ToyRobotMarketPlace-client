@@ -32,7 +32,7 @@ const ViewDetails = () => {
             <p className="py-3 text-2xl font-semibold">Price:$ {price}</p>
            <p className='inline-flex items-center text-2xl'><span className='font-semibold'>Rating:</span> {rating} <FaStar className='text-red-600 ms-1'></FaStar><FaStar className='text-red-600 ms-1'></FaStar><FaStar className='text-red-600 ms-1'></FaStar><FaStar className='text-red-600 ms-1'></FaStar><FaStarHalfAlt className='text-red-600 ms-1'></FaStarHalfAlt></p>
            <br/>
-           <p><span className='text-2xl font-semibold'>Details:</span> {details?details:'The mBot Robot Kit supports wireless communication through Bluetooth. Users can connect their smartphones, tablets, or computers to the robot and control it remotelyThe kit also includes a buzzer, LEDs, and other actuators for added functionality.'}</p>
+           <p><span className='text-2xl font-semibold'>Details:</span> {details?details.substring(0, 300):'The mBot Robot Kit supports wireless communication through Bluetooth. Users can connect their smartphones, tablets, or computers to the robot and control it remotelyThe kit also includes a buzzer, LEDs, and other actuators for added functionality.'}</p>
          <button onClick={toast} className=" btn btn-success inline-flex items-center text-red-600">Like<FaHeart className='ms-2'></FaHeart></button>
             </div>
         </div>

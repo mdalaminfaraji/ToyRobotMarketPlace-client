@@ -13,10 +13,18 @@ console.log(user?.email);
  },[])
 
  const handleSearchAscending=()=>{
-    console.log("object");
+    
+        fetch('http://localhost:5000/ascending')
+        .then(res=>res.json())
+        .then(data=>setMyToys(data));
+     
  }
  const handleSearchDescending=()=>{
-
+  
+        fetch('http://localhost:5000/descending')
+        .then(res=>res.json())
+        .then(data=>setMyToys(data));
+    
  }
 
     return (
@@ -25,8 +33,8 @@ console.log(user?.email);
         <h1 className="text-center p-4 text-4xl font-bold">My Toy Robots</h1>
         <div className="search-box p-2 text-center">
           
-          <button className='btn-primary' onClick={handleSearchAscending}>Ascending Order</button>
-          <button className='btn-primary' onClick={handleSearchDescending}>Descending Order</button>
+          <button className='btn-primary' onClick={handleSearchAscending}>Search Price ascending order</button>
+          <button className='btn-primary' onClick={handleSearchDescending}> Search Price descending order</button>
         </div>
         </div>
          <div className="overflow-x-auto w-full text-lg my-6">

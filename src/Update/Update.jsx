@@ -86,7 +86,7 @@ const Update = () => {
           <label className="label">
             <span className="label-text">Price</span>
           </label>
-          <input type="text" name='price'  placeholder={`previous price ${price} you can modify this field`} className="p-3 rounded-lg border-2 border-slate-500" />
+          <input type="text" name='price'  defaultValue={price}  className="p-3 rounded-lg border-2 border-slate-500" />
         </div>
         <div className="form-control">
           <label className="label">
@@ -98,7 +98,7 @@ const Update = () => {
           <label className="label">
             <span className="label-text">Available Quantity</span>
           </label>
-          <input type="text" name='availableQuantity'  placeholder={`previous quantity ${availableQuantity} you can modify this field`} className="p-3 rounded-lg border-2 border-slate-500" />
+          <input type="text" name='availableQuantity'  defaultValue={availableQuantity} className="p-3 rounded-lg border-2 border-slate-500" />
         </div>
         <div className="form-control">
           <label className="label">
@@ -113,7 +113,7 @@ const Update = () => {
           <label className="label">
             <span className="label-text">Details Description</span>
           </label>
-          <input type="text" name='details'  placeholder={`${details} you can modify this field`} className="p-3 rounded-lg border-2 border-slate-500" />
+          <input type="text" name='details'  defaultValue={details} className="p-3 rounded-lg border-2 border-slate-500" />
         </div>
         <div className="form-control mt-6 md:mx-40 mx-10">
           <button  className="btn text-[#F1F6F9] btn-block p-3 hover:bg-[#212A3E]  rounded-lg">Update A Toy</button>
