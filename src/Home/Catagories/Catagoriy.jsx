@@ -61,7 +61,7 @@ const [cars, setCars]=useState([]);
           <h2 className='text-center font-bold text-2xl'>As Human Toy Robots</h2>
          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {
-                humans.map(humanObj=><Humans key={humanObj._id} humanRobot={humanObj}></Humans>)
+                humans.slice(0, 3).map(humanObj=><Humans key={humanObj._id} humanRobot={humanObj}></Humans>)
             }
          </div>
         </TabPanel>
@@ -70,7 +70,7 @@ const [cars, setCars]=useState([]);
         <h2 className='text-center font-bold text-2xl'>Vehicle Toy Robots </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {
-                cars.map(carObj=><Cars key={carObj._id} carRobot={carObj}></Cars>)
+                cars.slice(0, 3).map(carObj=><Cars key={carObj._id} carRobot={carObj}></Cars>)
             }
          </div>
         </TabPanel>
@@ -79,7 +79,7 @@ const [cars, setCars]=useState([]);
         <h2 className='text-center font-bold text-2xl'> Animal Toy Robots</h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {
-                animals.map(animalObj=><Animal key={animalObj._id} animalObj={animalObj}></Animal>)
+                animals.slice(0, 3).map(animalObj=><Animal key={animalObj._id} animalObj={animalObj}></Animal>)
             }
          </div>
         </TabPanel>
