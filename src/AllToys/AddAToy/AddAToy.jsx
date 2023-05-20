@@ -13,7 +13,7 @@ const AddAToy = () => {
         const sellerName=form.sellerName.value;
         const sellerEmail=form.sellerEmail.value;
         const subCategories=form.subCategories.value;
-        const price=form.price.value;
+        const price=parseInt(form.price.value);
         const rating=form.rating.value;
         const photo=form.photo.value;
         const availableQuantity=form.availableQuantity.value;
