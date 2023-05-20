@@ -17,7 +17,7 @@ const Toys = ({toy, index, myToys, setMyToys}) => {
           }).then((result) => {
             console.log(result);
                if(result.isConfirmed){
-                fetch(`http://localhost:5000/toyRobotsDelete/${id}`,{
+                fetch(`https://robo-toys-world-server.vercel.app/toyRobotsDelete/${id}`,{
                             method:'DELETE',
                         })
                         .then(res=>res.json())

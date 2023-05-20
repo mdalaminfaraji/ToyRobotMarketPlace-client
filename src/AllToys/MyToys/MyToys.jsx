@@ -7,21 +7,21 @@ const MyToys = () => {
  const [myToys, setMyToys]=useState([]);
 console.log(user?.email);
  useEffect(()=>{
-    fetch(`http://localhost:5000/myToyRobots/${user?.email}`)
+    fetch(`https://robo-toys-world-server.vercel.app/myToyRobots/${user?.email}`)
     .then(res=>res.json())
     .then(data=>setMyToys(data));
  },[])
 
  const handleSearchAscending=()=>{
     
-        fetch('http://localhost:5000/ascending')
+        fetch('https://robo-toys-world-server.vercel.app/ascending')
         .then(res=>res.json())
         .then(data=>setMyToys(data));
      
  }
  const handleSearchDescending=()=>{
   
-        fetch('http://localhost:5000/descending')
+        fetch('https://robo-toys-world-server.vercel.app/descending')
         .then(res=>res.json())
         .then(data=>setMyToys(data));
     

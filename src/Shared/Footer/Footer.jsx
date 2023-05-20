@@ -7,7 +7,8 @@ import { MapPinIcon } from '@heroicons/react/24/solid';
 const Footer = () => {
    
     return (
-        <div className=' pt-10 grid grid-cols-1 md:grid-cols-2 bg-[#9BA4B5] rounded-lg' >
+      <>
+      <div className=' pt-10 grid grid-cols-1 md:grid-cols-2 bg-[#9BA4B5] rounded-lg' >
                  
   <div className=' w-[49%] mx-auto'>
     <img className='w-14 h-14 rounded-full'  src={logo1}/>
@@ -37,6 +38,10 @@ const Footer = () => {
     </div>
   </div>
         </div>
+      
+      <h1 className='text-center bg-[#9BA4B5]'>@Don't Copy Right</h1>
+      </>
+        
   
 
     );

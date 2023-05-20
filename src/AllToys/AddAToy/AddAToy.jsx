@@ -22,7 +22,7 @@ const AddAToy = () => {
            toyName, sellerEmail, sellerName, subCategories, price, rating, photo, availableQuantity, details
         }
     
-        fetch('http://localhost:5000/toyRobots/',{
+        fetch('https://robo-toys-world-server.vercel.app/toyRobots/',{
             method:'POST',
             headers:{
                 'content-type':'application/json',

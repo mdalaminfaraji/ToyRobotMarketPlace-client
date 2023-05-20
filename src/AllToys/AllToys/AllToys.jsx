@@ -7,7 +7,7 @@ const AllToys = () => {
     const [allToyRobot, setAllToyRobot]=useState(allToys);
     const [searchText, setSearchText] = useState("");
     const handleSearch = () => {
-        fetch(`http://localhost:5000/toyRobotsText/${searchText}`)
+        fetch(`https://robo-toys-world-server.vercel.app/toyRobotsText/${searchText}`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

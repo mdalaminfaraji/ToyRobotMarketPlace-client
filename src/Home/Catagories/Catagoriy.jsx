@@ -21,7 +21,7 @@ const [cars, setCars]=useState([]);
 
     
           useEffect(()=>{
-        fetch(`http://localhost:5000/toyRobots/`)
+        fetch(`https://robo-toys-world-server.vercel.app/toyRobots/`)
         .then(res=>res.json())
         .then(result=>setToyRobot(result))
              

@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       {
         path:'/all-toys',
         element:<AllToys></AllToys>,
-        loader:()=>fetch('http://localhost:5000/toyRobots/')
+        loader:()=>fetch('https://robo-toys-world-server.vercel.app/toyRobots/')
         
       },
       {
@@ -59,12 +59,12 @@ const router = createBrowserRouter([
       {
         path:'/viewDetails/:_id',
         element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/toyRobots/${params._id}`)
+        loader:({params})=>fetch(`https://robo-toys-world-server.vercel.app/toyRobots/${params._id}`)
       },
       {
             path:'/update/:id',
             element:<Update></Update>,
-            loader:({params})=>fetch(`http://localhost:5000/toyRobots/${params.id}`)
+            loader:({params})=>fetch(`https://robo-toys-world-server.vercel.app/toyRobots/${params.id}`)
       }
     ]
   },
