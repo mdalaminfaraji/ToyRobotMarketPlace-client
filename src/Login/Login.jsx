@@ -1,22 +1,31 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProviders';
 import { Player } from '@lottiefiles/react-lottie-player';
 import Swal from 'sweetalert2';
 import { FaGoogle } from 'react-icons/fa';
+import useTitle from '../Hooks/useTitle';
 
 
 const Login = () => {
-    const {signIn,user, signInWithGoogle}=useContext(AuthContext);
+  useTitle('Login');
+    const {signIn,user,loading, signInWithGoogle}=useContext(AuthContext);
+    const [error, setError]=useState('');
     const navigate=useNavigate();
     const location=useLocation();
     const from=location.state?.from?.pathname || "/";
     const handleLogin=(event)=>{
+      setError('');
         event.preventDefault();
        const form=event.target;
         const email=form.email.value;
          const password=form.password.value;
+         if(password.length<6){
+            setError('Please Enter valid password!!!');
+            return;
+         }
          signIn(email, password)
+        
          .then(result=>{
             const loggedUser=result.user;
             Swal.fire({
@@ -26,12 +35,15 @@ const Login = () => {
                 showConfirmButton: false,
                 timer: 1000
               })
+             if(loading){
+                return <progress className="progress w-full h-5  "></progress>
+            }
             navigate(from, { replace: true });
           
-            console.log(loggedUser);
+            setError('');
          })
          .catch(error=>{
-            console.log(error.message);
+            setError(error.message);
          })
     }
 
@@ -40,15 +52,16 @@ const Login = () => {
             .then(result=>{
                 console.log(result.user);
                 navigate(from, { replace: true });
+                setError('');
             })
-            .catch(error=>console.log(error.message))
+            .catch(error=>setError(error.message))
     }
    
     return (
        <>
        <h1 className='text-center text-5xl bg-base-200 pt-5'>Login page !!!!</h1>
-       
-       <div className="hero min-h-screen bg-base-200">
+       <h1 className='text-red-400 bg-base-200 text-center p-3 text-2xl'>{error}</h1>
+       <div className="hero bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
         
@@ -78,7 +91,7 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="text" name='password' placeholder="password" className="input input-bordered" />
+                <input type="password" name='password' placeholder="password" className="input input-bordered" />
                
               </div>
               <div className="form-control mt-6">

@@ -2,8 +2,10 @@ import React from 'react';
 import { FaArrowLeft, FaHeart, FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../../Hooks/useTitle';
 
 const ViewDetails = () => {
+    useTitle('ViewDetails')
     const viewData=useLoaderData();
     const {  toyName, sellerEmail, sellerName, subCategories, price, rating, photo, availableQuantity, details}=viewData;
     const toast=()=>{

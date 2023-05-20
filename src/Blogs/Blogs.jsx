@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import useTitle from '../Hooks/useTitle';
 // import banner1 from '../images/banner2.jpg'
 // import banner2 from '../images/banner3.jpg'
 // import banner3 from '../images/banner4.jpg'
 const Blogs = () => {
+    useTitle('Blogs');
     const [read, setRead]=useState(true);
     const [reads, setReads]=useState(true);
     const [readed, setReaded]=useState(true);

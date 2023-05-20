@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
 import Toys from './Toys';
+import useTitle from '../../Hooks/useTitle';
 
 const MyToys = () => {
+    useTitle('MyToys');
     const {user}=useContext(AuthContext);
  const [myToys, setMyToys]=useState([]);
-console.log(user?.email);
+// console.log(user?.email);
  useEffect(()=>{
     fetch(`https://robo-toys-world-server.vercel.app/myToyRobots/${user?.email}`)
     .then(res=>res.json())

@@ -2,8 +2,10 @@ import React from 'react'
 import { Link, useRouteError } from 'react-router-dom'
 import { Player } from '@lottiefiles/react-lottie-player';
 import { FaArrowLeft} from "react-icons/fa";
+import useTitle from '../Hooks/useTitle';
 
 const ErrorPage = () => {
+  useTitle('ErrorPage')
   const { error, status } = useRouteError()
   return (
     <section className='flex items-center h-screen p-16 bg-red-100  text-gray-900'>

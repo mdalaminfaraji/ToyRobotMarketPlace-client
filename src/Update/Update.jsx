@@ -3,8 +3,10 @@ import { FaArrowLeft } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Providers/AuthProviders';
+import useTitle from '../Hooks/useTitle';
 
 const Update = () => {
+    useTitle('Update')
     const {user}=useContext(AuthContext);
     const robotToy=useLoaderData();
     const {_id, toyName, sellerEmail, sellerName, subCategories, price, rating, photo, availableQuantity, details}=robotToy;

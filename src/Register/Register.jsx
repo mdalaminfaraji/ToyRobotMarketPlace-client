@@ -1,12 +1,15 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Player } from '@lottiefiles/react-lottie-player';
 import { updateProfile } from '@firebase/auth';
 import { AuthContext } from '../Providers/AuthProviders';
 import Swal from 'sweetalert2';
+import useTitle from '../Hooks/useTitle';
 
 const Register = () => {
-  const {user,createUser}=useContext(AuthContext);
+  useTitle('Register')
+  const navigate=useNavigate();
+  const {user,loading,createUser}=useContext(AuthContext);
 //   console.log(user.displayName);
 const [error, setError]=useState('');
 const [success, setSuccess]=useState('');
@@ -19,7 +22,7 @@ const [success, setSuccess]=useState('');
     const photoUrl=form.photoUrl.value;
     const email=form.email.value;
     const password=form.password.value;
-    console.log(name, email, password, photoUrl);
+    // console.log(name, email, password, photoUrl);
     // validate
     if(password.length<=5){
         setError('Your password must be at least 6 characters');
@@ -41,6 +44,12 @@ const [success, setSuccess]=useState('');
             showConfirmButton: false,
             timer: 1500
           })
+
+          navigate(`${user?'/':'/login'}`);
+          if(loading){
+            return <progress className="progress w-full h-5  "></progress>
+          }
+         
     })
     .catch(error=>{
         console.log(error.message);

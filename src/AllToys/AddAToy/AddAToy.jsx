@@ -3,8 +3,10 @@ import { FaArrowLeft } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Providers/AuthProviders';
+import useTitle from '../../Hooks/useTitle';
 
 const AddAToy = () => {
+  useTitle('AddAToy');
     const {user}=useContext(AuthContext);
     const handleSubmit = (e) => {
         e.preventDefault();
