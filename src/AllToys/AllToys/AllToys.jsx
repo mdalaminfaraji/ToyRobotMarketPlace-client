@@ -35,13 +35,13 @@ const AllToys = () => {
           {/* head */}
           <thead >
             <tr >
-              <th style={{fontSize:'20px',textAlign:'center'}}>No</th>
-              <th style={{fontSize:'20px',textAlign:'center'}}>SellerName</th>
-              <th style={{fontSize:'20px',textAlign:'start'}}>Toy Name</th>
-              <th style={{fontSize:'20px',textAlign:'center'}}>Sub-category</th>
-              <th style={{fontSize:'20px',textAlign:'center'}}>Price</th>
-              <th style={{fontSize:'20px',textAlign:'center'}}>Available Quantity</th>
-              <th style={{fontSize:'20px',textAlign:'center'}}>View </th>
+              <th style={{fontSize:'18px',textAlign:'center'}}>No</th>
+              <th style={{fontSize:'18px',textAlign:'center'}}>SellerName</th>
+              <th style={{fontSize:'18px',textAlign:'start'}}>Toy Name</th>
+              <th style={{fontSize:'18px',textAlign:'center'}}>Sub-category</th>
+              <th style={{fontSize:'18px',textAlign:'center'}}>Price</th>
+              <th style={{fontSize:'18px',textAlign:'center'}}>Available Quantity</th>
+              <th style={{fontSize:'18px',textAlign:'center'}}>View </th>
             </tr>
           </thead>
           <tbody>

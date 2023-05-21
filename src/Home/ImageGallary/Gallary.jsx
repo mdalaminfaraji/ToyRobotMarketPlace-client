@@ -38,17 +38,16 @@ const Gallary = () => {
        <div data-aos="zoom-in-down"  className='row-span-2 justify-self-center self-center'>
         <img className='border-8 shadow-lg' src="https://i.ibb.co/SxnkxXB/New-Project-16.png"/>
        </div>
-       <div data-aos="zoom-in-left" className='row-span-2 md:hidden justify-self-center self-center'>
+       <div data-aos="zoom-in" className='row-span-2 md:hidden justify-self-center self-center'>
         <img className='border-8 shadow-lg' src="https://i.ibb.co/KctXJjm/New-Project-19.png"/>
        </div>
        <div data-aos="zoom-in-down" className='row-span-2 col-span-2'>
         <img className='border-8 shadow-lg' src="https://i.ibb.co/3hQ36bg/New-Project-20.png"/>
        </div>
-       <div data-aos="zoom-in-left" className='row-span-2 col-span-2'>
+       <div data-aos="zoom-in" className='row-span-2 col-span-2'>
         <img className='border-8 shadow-lg' src="https://i.ibb.co/yP8dGbZ/New-Project-21.png"/>
        </div>
-       <div data-aos="zoom-in-left"
-     data-aos-easing="linear"
+       <div data-aos="zoom-in"
      data-aos-duration="1500" className='row-span-2 justify-self-center self-center'>
         <img className='border-8 shadow-lg' src="https://i.ibb.co/C6CGy0P/New-Project-3.png"/>
        </div>

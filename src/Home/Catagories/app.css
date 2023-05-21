@@ -16,16 +16,16 @@
     background-color: lightgray;
     margin-right: 10px;
     cursor: pointer;
-    border-radius: 2px solid black;
+    border-radius: 10px solid black;
   }
   
   .react-tabs__tab--selected {
-    background-color: #212A3E;
+    background-color: #152343;
     color: white;
   }
   
   .react-tabs__tab-panel {
-    padding: 20px;
+    padding: 25px;
     border-top: 3px solid ;
     width: 100%;
     margin: 0 auto;

@@ -25,7 +25,7 @@ const Toys = ({toy, index}) => {
              </td>
              
              <th style={{fontSize:'20px',textAlign:'center'}}>
-               <Link to={`/viewDetails/${_id}`} className="btn-primary">Details</Link>
+               <Link to={`/viewDetails/${_id}`} className="btn">Details</Link>
              </th>
            </tr>
         

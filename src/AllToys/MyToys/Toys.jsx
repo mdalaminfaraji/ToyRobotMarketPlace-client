@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaEdit, FaTrash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -62,8 +63,8 @@ const Toys = ({toy, index, myToys, setMyToys}) => {
              </td>
              
              <th style={{fontSize:'20px',textAlign:'center'}}>
-               <Link to={`/update/${_id}`} className="btn-primary">Update</Link>
-               <button onClick={()=>handleDelete(_id)} className="btn btn-warning bg-red-500 text-white">Delete</button>
+               <Link to={`/update/${_id}`} className="btn btn-success  inline-flex items-center"><FaEdit></FaEdit></Link>
+               <button onClick={()=>handleDelete(_id)} className="btn btn-warning inline-flex items-center bg-slate-800 text-white"><FaTrash></FaTrash></button>
              </th>
            </tr>
         
